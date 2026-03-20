@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafsa Special | No-Image Aesthetic</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Noto+Nastaliq+Urdu&family=Poppins:wght@300;600&display=swap');
+
+        body {
+            margin: 0; padding: 0; background: #050505; color: white;
+            font-family: 'Poppins', sans-serif; overflow: hidden;
+            height: 100vh; display: flex; justify-content: center; align-items: center;
+        }
+
+        /* Glassmorphism Card */
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px 20px; border-radius: 35px;
+            text-align: center; width: 85%; max-width: 400px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+            position: relative; z-index: 10; display: none;
+        }
+
+        .slide { display: none; animation: slideIn 0.8s ease-out; }
+        .active { display: block; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Typography */
+        h1 { font-family: 'Dancing Script', cursive; font-size: 32px; color: #ff758c; margin-bottom: 10px; }
+        .urdu-text { font-family: 'Noto Nastaliq Urdu', serif; line-height: 2.5; direction: rtl; font-size: 19px; }
+        .roman-text { font-size: 16px; font-weight: 600; color: #ff80ab; margin: 15px 0; }
+
+        /* Love Templates Decor */
+        .divider { height: 2px; width: 50px; background: #ff758c; margin: 20px auto; border-radius: 10px; }
+        .quote-box { border-left: 3px solid #ff758c; padding-left: 15px; text-align: left; font-style: italic; font-size: 14px; color: #ddd; }
+
+        .btn {
+            background: linear-gradient(45deg, #ff758c, #ff7eb3);
+            color: white; border: none; padding: 12px 30px;
+            border-radius: 50px; cursor: pointer; margin-top: 25px; font-weight: 600;
+        }
+
+        /* Particle Magic */
+        .particle { position: fixed; pointer-events: none; animation: floatUp 4s linear forwards; z-index: 99; }
+        @keyframes floatUp { 0% { transform: translateY(0) scale(1); opacity: 1; } 100% { transform: translateY(-110vh) scale(1.5); opacity: 0; } }
+
+        .envelope-box { text-align: center; cursor: pointer; }
+        .env-icon { font-size: 80px; color: #ff758c; animation: beat 1.5s infinite; }
+        @keyframes beat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+    </style>
+</head>
+<body onclick="spawnParticles(event)">
+
+    <div id="stars-bg"></div>
+
+    <div class="envelope-box" id="open-box" onclick="startSurprise()">
+        <div class="env-icon">💌</div>
+        <p>A message for my Moon...</p>
+        <button class="btn">Tap to Read</button>
+    </div>
+
+    <div class="card" id="main-card">
+
+        <div class="slide active" id="t1">
+            <h1>Dear Hafsa...</h1>
+            <div class="divider"></div>
+            <p>Pictures don't define my love, my words do. Aaj ki raat sirf humari hai. ✨</p>
+            <button class="btn" onclick="next(2)">Ready? ❤️</button>
+        </div>
+
+        <div class="slide" id="t2">
+            <h1 style="font-size: 80px; color: #ffd700;" id="count">3</h1>
+            <p>Dhadkanein tez hone wali hain...</p>
+        </div>
+
+        <div class="slide" id="t3">
+            <p style="color: #ff7eb3; font-size: 12px;">┊ . ˚ ˚★ `𝐂𝐇𝐀𝐀𝐍𝐃 𝐑𝐀𝐀𝐓 𝐌𝐔𝐁𝐀𝐑𝐀𝐊`❤️🫂✨</p>
+            <div class="divider"></div>
+            <h1 class="urdu-text">سـب سے پـہلے میـرے چـاند سے ٹکـڑے کو عیـد کا چـاند مبـarک🌛✨</h1>
+            <button class="btn" onclick="next(4)">Next Page ➔</button>
+        </div>
+
+        <div class="slide" id="t4">
+            <div class="quote-box">
+                "Chanda farsh ko chanda arsh mubarak..." 🌙
+            </div>
+            <h1 class="urdu-text" style="font-size: 16px; margin-top:20px;">𝘾𝙃𝘼𝙉𝘿 𝙍𝘼𝙏 𝙈𝙐𝘽𝘼𝙍𝙆 𝙈𝙀𝙍𝙄 𝙅𝘼𝙉🥹🫰🏻✨🌷🌜</h1>
+            <p class="roman-text">You are the only moon I see. 🫀</p>
+            <button class="btn" onclick="next(5)">Last Message 💍</button>
+        </div>
+
+        <div class="slide" id="t5">
+            <p class="roman-text" style="font-size: 18px;">𝐂𝐇𝐀𝐍𝐃 𝐑𝐀𝐓 𝐌𝐔𝐁𝐀𝐑𝐀𝐊 𝐌𝐄𝐑𝐈 𝐉𝐀𝐍 🫀🫰🏻🫂</p>
+            <div class="divider"></div>
+            <p style="font-size: 12px; opacity: 0.6;">You are my forever and always. 𝑳𝒖𝒃 𝒀𝒐𝒖 𝑴𝒂𝒍𝒊 𝑱𝒂𝒏 💋</p>
+            <div style="font-size: 10px; opacity: 0.4; margin-top: 10px;">━╬٨ـﮩﮩ❤٨ـﮩﮩـ╬━</div>
+        </div>
+
+    </div>
+
+    <script>
+        function startSurprise() {
+            document.getElementById('open-box').style.display = 'none';
+            document.getElementById('main-card').style.display = 'block';
+            autoHearts();
+        }
+
+        function next(n) {
+            document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+            document.getElementById('t' + n).classList.add('active');
+            if(n === 2) {
+                let c = 3;
+                let t = setInterval(() => {
+                    c--;
+                    if(c>0) document.getElementById('count').innerText = c;
+                    else { clearInterval(t); next(3); }
+                }, 1000);
+            }
+        }
+
+        function spawnParticles(e) {
+            const items = ['❤️', '✨', '🌸', '💖', '⭐', '🌛', '🌜'];
+            for(let i=0; i<15; i++) {
+                const p = document.createElement('div');
+                p.className = 'particle';
+                p.innerHTML = items[Math.floor(Math.random() * items.length)];
+                p.style.left = (e ? e.clientX : Math.random() * window.innerWidth) + 'px';
+                p.style.top = (e ? e.clientY : window.innerHeight) + 'px';
+                p.style.fontSize = Math.random() * 20 + 15 + 'px';
+                p.style.animationDuration = Math.random() * 2 + 2 + 's';
+                document.body.appendChild(p);
+                setTimeout(() => p.remove(), 4000);
+            }
+        }
+
+        function autoHearts() {
+            setInterval(() => spawnParticles(), 1500);
+        }
+    </script>
+</body>
+</html>
