@@ -1,134 +1,247 @@
 <!DOCTYPE html>
-<html lang="ur">
+<html lang="ur" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eid Gift for Hafsa</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Noto+Nastaliq+Urdu&family=Poppins:wght@300;600&display=swap');
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Bestie ❤️</title>
 
-        body { margin: 0; padding: 0; background: #050505; color: white; font-family: 'Poppins', sans-serif; overflow: hidden; height: 100vh; display: flex; justify-content: center; align-items: center; }
-        .container { width: 90%; max-width: 450px; text-align: center; position: relative; z-index: 10; }
-        
-        .slide { display: none; animation: zoomIn 0.8s ease; max-height: 80vh; overflow-y: auto; padding: 20px; border-radius: 20px; background: rgba(255,255,255,0.03); backdrop-filter: blur(10px); }
-        .active { display: block; }
-        @keyframes zoomIn { from { opacity: 0; transform: scale(0.5); } to { opacity: 1; transform: scale(1); } }
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
 
-        h1 { font-family: 'Dancing Script', cursive; font-size: 40px; color: #ff758c; }
-        .urdu-text { font-family: 'Noto Nastaliq Urdu', serif; line-height: 2.5; direction: rtl; font-size: 18px; }
-        .btn { background: #ff758c; border: none; padding: 12px 25px; color: white; border-radius: 50px; cursor: pointer; margin-top: 20px; font-weight: bold; box-shadow: 0 0 15px #ff758c; }
-        
-        /* Nicknames List Styling */
-        .nickname-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; text-align: left; font-size: 13px; margin-top: 15px; }
-        .nick-item { background: rgba(255,117,140,0.1); padding: 5px 10px; border-radius: 10px; border-left: 3px solid #ff758c; }
+body{
+background:linear-gradient(-45deg,#ff5f9e,#ff7eb3,#ffc3a0,#ffd5ec);
+background-size:400% 400%;
+animation:bgMove 12s ease infinite;
+min-height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
 
-        .heart { position: absolute; color: #ff4d6d; animation: float 4s linear infinite; }
-        @keyframes float { 0% { transform: translateY(100vh); } 100% { transform: translateY(-10vh); } }
-    </style>
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.card{
+width:min(95%,850px);
+background:rgba(255,255,255,.95);
+padding:25px;
+border-radius:30px;
+text-align:center;
+box-shadow:0 10px 35px rgba(0,0,0,.2);
+z-index:2;
+}
+
+h1{
+color:#ff2d75;
+margin-bottom:15px;
+}
+
+#content{
+font-size:19px;
+line-height:2;
+min-height:150px;
+}
+
+button{
+border:none;
+background:#ff2d75;
+color:white;
+padding:14px 25px;
+border-radius:50px;
+font-size:17px;
+cursor:pointer;
+margin-top:15px;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+.float{
+position:fixed;
+pointer-events:none;
+animation:up linear forwards;
+}
+
+@keyframes up{
+0%{
+transform:translateY(0);
+opacity:1;
+}
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+}
+
+.final{
+font-size:32px;
+font-weight:bold;
+color:#ff006e;
+animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+50%{
+transform:scale(1.1);
+}
+}
+</style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="slide active" id="t1">
-            <h1>Hey My Queen...</h1>
-            <p>Ready for the most special Eid wish of your life?</p>
-            <button class="btn" onclick="next(2)">Yes, My Jaan ❤️</button>
-        </div>
+<div class="card">
 
-        <div class="slide" id="t2">
-            <h1 style="font-size: 100px;" id="count">3</h1>
-            <p>Hold your breath...</p>
-        </div>
+<h1 id="title">❤️ My Bestie ❤️</h1>
 
-        <div class="slide" id="t3">
-            <h1 class="urdu-text">عیـــــــــــــد الفطــــــــــــــر مبــــــــــــــــــــــارکـــــــــــ🌙✨</h1>
-            <h2 style="color: #ff758c;">🌸 میـــــــری پیـــــــاری بیگم جی ـــ🌸</h2>
-            <button class="btn" onclick="next(4)">Next ➔</button>
-        </div>
+<div id="content">
+میرے دل کی سب سے خاص انسان کے لیے ✨💖
+</div>
 
-        <div class="slide" id="t4">
-            <p class="urdu-text">تم سے ملna میری زندگی کی سب سے بڑی خوش نصیبی ہے 🤌🏻 تمہارے ساتھ گزارے لمحات میرے لیے بہت قیمتی ہے 🫶🏻 تمہارے ساتھ وقت کا پت				ہ ہی نہیں لگا کیسے گزر گیا 🌿</p>
-            <button class="btn" onclick="next(5)">Aage Dekho... ✨</button>
-        </div>
+<button id="btn" onclick="nextStep()">
+💋 میری جان
+</button>
 
-        <div class="slide" id="t5">
-            <p style="font-size: 18px; line-height: 1.8;">
-                Tou sade warga ayyy_____🫀🌸 <br>
-                asi tere warge aaan🫠🫂 <br>
-                asi teno pyar nahi karde👉🏻💋 <br>
-                <b>mohbat karde aan</b> 👣🕊️
-            </p>
-            <button class="btn" onclick="next(6)">More ❤️</button>
-        </div>
+</div>
 
-        <div class="slide" id="t6">
-            <p class="urdu-text">تم تو اتنی پیاری ہو کہ تمہیں گھنٹوں بیٹھ کر دیکھا جا سکتا ہے... میں نے تم میں خوبصورتی اور وفاداری دونوں دیکھی ہیں 👀 میں بہت خوش قسمت ہوں کہ جس لڑکی سے میں نے محبت کی وہ وفادار بھی ہے 🤌🏻🫀</p>
-            <button class="btn" onclick="next(7)">Hamesha Saath? 💍</button>
-        </div>
+<script>
 
-        <div class="slide" id="t7">
-            <p class="urdu-text">لوگ کہتے ہیں کہ محبت برباد کرتی ہے 🙇🏼‍♀️❤️‍🩹 اگر ساتھ نبھانے والے ہوں تو دنیا یاد رکھتی ہے 🕊️🫂 ہمیشہ میرے ساتھ رہنا ♥️ اللہ تعالیٰ ہمیں ایسے ہی ساتھ میں ہزاروں عیدیں دیکھنا نصیب فرمائے 🌸 آمـــــــــــــــین ثمــــــــــــــــہ آمــــــــــــــــــین 🌸</p>
-            <button class="btn" onclick="next(8)">Wait, There's More! 🎁</button>
-        </div>
+const data = [
 
-        <div class="slide" id="t8">
-            <h3 style="color: #ff758c;">You are my... 🐥</h3>
-            <div class="nickname-grid">
-                <div class="nick-item">1: ᴍʏ ᴊᴀɴᴜ🥹⁹💗</div>
-                <div class="nick-item">2: 𝕄𝕪 𝔹𝕒𝕓𝕪 🌸🫵🏻</div>
-                <div class="nick-item">3: 🅼🆈 🅷🅴🅰️🆁🆃❤️</div>
-                <div class="nick-item">4: 🄼🅈 🄻🄸🄵🄴🌍</div>
-                <div class="nick-item">5: 🅜🅨 🅢🅞🅤🅛💞</div>
-                <div class="nick-item">6: 𝐌𝐲 𝐄𝐯𝐞𝐫𝐲𝐭𝐡𝐢𝐧𝐠🥺</div>
-                <div class="nick-item">12: 𝗠𝘆 𝗙𝗹𝗼𝘄𝗲𝗿🥀✨</div>
-                <div class="nick-item">13: 𝘔𝘺 𝘓𝘰𝘷𝘦💋🤌🏻</div>
-                <div class="nick-item">19: M҇y҇ P҇a҇r҇t҇n҇e҇r҇🌸</div>
-                <div class="nick-item">23: ꂵꌦ ꉔꁝꄲꉔ꒒ꋬ꓄ꏂ🍫</div>
-                <div class="nick-item">30: Ꮇ𝑦 𝘣ɑ𝖓𝒹𝖊𝔯 🙈</div>
-                <div class="nick-item">31: Ꮇ𝑦 𝗞һɑ𝔯օօ𝓼🌚</div>
-            </div>
-            <button class="btn" onclick="next(9)">Aao Na... 💋</button>
-        </div>
+{
+btn:"🫂 میرا سکون",
+title:"💋 میری جان",
+text:"تم میری جان ہو ❤️<br>تمہارے بغیر سب ادھورا لگتا ہے 🥺🫀<br>تم میری سب سے قیمتی خوشی ہو ✨"
+},
 
-        <div class="slide" id="t9">
-            <p class="urdu-text">Ab jaldi se mujhe Eid milne ke liye aao💋🌷 intazar kar raha hun main tumhara 🫠🤌🏻.. <br> جاناں🐣🦋💕🧸</p>
-            <button class="btn" onclick="final()">End of Love? No. ❤️</button>
-        </div>
+{
+btn:"🌍 میری فیملی",
+title:"🫂 میرا سکون",
+text:"میــــرا سُکــــون bestie 🫂🥺<br>تمہاری ہنسی سے میرا دن بن جاتا ہے ♥️<br>تم میری طاقت ہو ✨"
+},
 
-        <div class="slide" id="t10">
-            <p style="font-size: 14px;">𝑻𝒖𝒎 𝒘𝒐 𝑾𝒂𝒉𝒊𝒅 𝑳𝒓𝒌𝒊 𝑯𝒐 𝑴𝒓𝒊 𝑱𝒂𝒘𝒏🌺❤️‍🔥🌍</p>
-            <p style="font-size: 12px; color: #ff758c;">𝑳𝒖𝒃 𝒀𝒐𝒖 𝑴𝒂𝒍𝒊 𝑱𝒂𝒏 💋🫂😘</p>
-            <div style="font-size: 10px; opacity: 0.5;">━╬٨ـﮩﮩ❤٨ـﮩﮩـ╬━</div>
-        </div>
-    </div>
+{
+btn:"🤍 میری دنیا",
+title:"🌍 میری فیملی",
+text:"تم میری جان ہو، میری فیملی ہو 💋♥️<br>تمہارے ساتھ ہر بات خاص لگتی ہے 🌍🫶"
+},
 
-    <script>
-        function next(n) {
-            document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
-            document.getElementById('t' + n).classList.add('active');
+{
+btn:"❤️ میری Bestie",
+title:"🤍 میری دنیا",
+text:"اللہ تمہیں ہمیشہ خوش رکھے 🤍🥹<br>تم ہو تو دنیا حسین ہے ✨🫂"
+},
 
-            if(n === 2) {
-                let c = 3;
-                let t = setInterval(() => {
-                    c--;
-                    if(c>0) document.getElementById('count').innerText = c;
-                    else { clearInterval(t); next(3); }
-                }, 1000);
-            }
-        }
+{
+btn:"🎉 Final Surprise",
+title:"❤️ میری Bestie",
+text:"➺ I Love You My Bestie ❤️<br><br>You Are My Peace 🥺♥️"
+}
 
-        function final() {
-            next(10);
-            setInterval(() => {
-                const h = document.createElement('div');
-                h.className = 'heart';
-                h.innerHTML = '❤️';
-                h.style.left = Math.random() * 100 + 'vw';
-                h.style.fontSize = Math.random() * 20 + 10 + 'px';
-                document.body.appendChild(h);
-                setTimeout(() => h.remove(), 4000);
-            }, 200);
-        }
-    </script>
+];
+
+let index = 0;
+
+function nextStep(){
+
+if(index < data.length){
+
+document.getElementById("title").innerHTML =
+data[index].title;
+
+document.getElementById("content").innerHTML =
+data[index].text;
+
+document.getElementById("btn").innerHTML =
+data[index].btn;
+
+index++;
+
+}else{
+
+document.getElementById("title").innerHTML =
+"💖 FINAL SURPRISE 💖";
+
+document.getElementById("content").innerHTML =
+`
+<div class="final">
+💋💋💋💋💋💋💋💋💋💋<br>
+I LOVE YOU MY BESTIE ❤️<br>
+💋💋💋💋💋💋💋💋💋💋
+</div>
+`;
+
+document.getElementById("btn").style.display="none";
+
+startKissRain();
+}
+
+}
+
+function floating(){
+
+const icons=["❤️","⭐","✨","💖"];
+
+const el=document.createElement("div");
+
+el.className="float";
+el.innerHTML=
+icons[Math.floor(Math.random()*icons.length)];
+
+el.style.left=Math.random()*100+"vw";
+el.style.bottom="-30px";
+el.style.fontSize=(18+Math.random()*25)+"px";
+el.style.animationDuration=(4+Math.random()*4)+"s";
+
+document.body.appendChild(el);
+
+setTimeout(()=>{
+el.remove();
+},8000);
+
+}
+
+setInterval(floating,250);
+
+function startKissRain(){
+
+setInterval(()=>{
+
+for(let i=0;i<10;i++){
+
+const kiss=document.createElement("div");
+
+kiss.className="float";
+kiss.innerHTML="💋";
+
+kiss.style.left=Math.random()*100+"vw";
+kiss.style.bottom="-20px";
+kiss.style.fontSize=(25+Math.random()*35)+"px";
+kiss.style.animationDuration="4s";
+
+document.body.appendChild(kiss);
+
+setTimeout(()=>{
+kiss.remove();
+},5000);
+
+}
+
+},300);
+
+}
+
+</script>
+
 </body>
 </html>
